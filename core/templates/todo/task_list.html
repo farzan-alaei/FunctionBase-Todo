@@ -15,7 +15,7 @@
 
         <h1 class="text-center mb-4">Todo List</h1>
 
-        <form method="POST" action="{% url 'create-task' %}">
+        <form method="POST" action="/">
             {% csrf_token %}
           <div class="input-group mb-3">
             <input type="text" name="title" class="form-control" placeholder="Enter task..." required>
@@ -33,9 +33,9 @@
             <span>{{ task }}</span>
             {% endif %}
             <div>
-              <a href="{% url 'delete-task' task.id %}"><button class="btn btn-sm btn-danger mr-2">Delete</button></a>
-              <a href="{% url 'update-task' task.id %}"><button class="btn btn-sm btn-secondary mr-2">Edit</button></a>
-              <a href="{% url 'complete-task' task.id %}"><button class="btn btn-sm btn-success">Complete</button></a>
+              <a href="{% url 'todo:delete-task' task.id %}"><button class="btn btn-sm btn-danger mr-2">Delete</button></a>
+              <a href="{% url 'todo:update-task' task.id %}"><button class="btn btn-sm btn-secondary mr-2">Edit</button></a>
+              <a href="{% url 'todo:complete-task' task.id %}"><button class="btn btn-sm btn-success">Complete</button></a>
             </div>
           </li>
         </ul>

@@ -17,34 +17,10 @@
                 {{ form }}
         </div>
         <button type="submit" class="btn btn-primary mr-3"><i class="fas fa-save mr-2"></i>Save</button>
-        <a href="{% url 'task-list' %}"><button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times mr-2"></i>Cancel</button></a>
+        <a href="{% url 'todo:task-list' %}"><button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times mr-2"></i>Cancel</button></a>
     </form>
 </div>
 
 {% endblock %}
 
 
-    <div class="container my-5">
-        <h1 class="text-center mb-5">Edit Task</h1>
-        <form>
-            <div class="form-group">
-                <label for="task-name">Task Name</label>
-                <input type="text" class="form-control" id="task-name" required>
-            </div>
-            <div class="form-group">
-                <label for="task-desc">Task Description</label>
-                <textarea class="form-control" id="task-desc" rows="3" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="task-priority">Task Priority</label>
-                <select class="form-control" id="task-priority" required>
-                    <option value="" selected disabled>Select Priority</option>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary mr-3"><i class="fas fa-save mr-2"></i>Save</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times mr-2"></i>Cancel</button>
-        </form>
-    </div>
